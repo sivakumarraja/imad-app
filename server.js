@@ -19,6 +19,16 @@ var articles={
                 </p>`
                  
         },
+    'article-two':{
+        title:'Article 2',
+        heading: 'Saanvika\'s Birthday',
+        date:'April 17 2015',
+        content:`
+                <p>
+                    Daring, Dashing, Dynamic Baby girl.
+                </p>
+        `
+    }
 };
 
 function createTemplate(data){
