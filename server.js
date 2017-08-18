@@ -7,6 +7,7 @@ app.use(morgan('combined'));
 
 var articleOne={
     title:'MY ARTICLE',
+    heading: 'NICKY BIRTHDAY',
     date:'JUNE 12, 2014',
     content:`
             <p>
