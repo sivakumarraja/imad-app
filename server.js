@@ -59,7 +59,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function (req, res){
-    res.send(createTemplate('MYARTICLE'));
+    res.send(createTemplate(MYARTICLE));
 });
 
 app.get('/article-two', function (req, res){
