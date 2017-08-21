@@ -71,6 +71,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index-siva.html'));
+});
+
+
 app.get('/:articleName',function(req, res) {
     var articleName = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
