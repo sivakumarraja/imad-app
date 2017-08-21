@@ -12,8 +12,8 @@ var marginLeft = 0;
 function moveRight() {
     marginLeft = marginLeft + 10;
     img.style.marginLeft = marginLeft + 'px';
-    if(marginLeft > 1024 )  {
-        marginLeft = -10;
+    if(marginLeft > screen.width )  {
+        marginLeft = 0;
     }
 }
 img.onclick = function (){
