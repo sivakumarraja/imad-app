@@ -9,6 +9,9 @@ element. innerHTML = "New Value1";
 
 var img = document.getElementById('madi1');
 var marginLeft = 0;
+
+alert('1');
+
 function moveRight() {
     marginLeft = marginLeft + 10;
     img.style.marginLeft = marginLeft + 'px';
@@ -17,8 +20,12 @@ function moveRight() {
     }
 }
 
+alert('2');
+
 img.onClick = function ()
 {
     alert('hello..');
     var interval = setInterval(moveRight,50);
 };
+
+alert('3');
