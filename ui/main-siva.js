@@ -13,12 +13,13 @@ function moveRight() {
     marginLeft = marginLeft + 10;
     img.style.marginLeft = marginLeft + 'px';
     if(marginLeft > screen.width )  {
-        marginLeft = 0;
+        //marginLeft = 0;
+        screen.left;
     }
 }
 
 img.onclick = function ()
 {
-    alert('hello..');
+    // alert('hello..');
     var interval = setInterval(moveRight,50);
 };
