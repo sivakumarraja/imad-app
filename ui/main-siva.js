@@ -17,7 +17,8 @@ function moveRight() {
     }
 }
 
-img.onClick = function (){
+img.onClick = function ()
+{
+    alert('hello..');
     var interval = setInterval(moveRight,50);
-    
 };
