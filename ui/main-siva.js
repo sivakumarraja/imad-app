@@ -11,7 +11,7 @@ var img1 = document.getElementById('madi1');
 var marginLeft1 = 0;
 function moveRight() {
     marginLeft1 = marginLeft1 + 10;
-    img.style.marginLeft1 = marginLeft1 + 'px';
+    img.style.marginLeft = marginLeft1 + 'px';
     if(marginLeft1 > screen.width )  {
         marginLeft1 = 0;
     }
