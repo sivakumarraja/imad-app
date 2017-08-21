@@ -17,7 +17,7 @@ function moveRight() {
     }
 }
 
-img.onClick = function ()
+img.onclick = function ()
 {
     alert('hello..');
     var interval = setInterval(moveRight,50);
