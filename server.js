@@ -72,7 +72,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/siva-index', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+  res.sendFile(path.join(__dirname, 'ui', 'index-siva.html'));
 });
 
 app.get('/:articleName',function(req, res) {
