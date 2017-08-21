@@ -13,7 +13,7 @@ function moveRight() {
     marginLeft = marginLeft + 10;
     img.style.marginLeft = marginLeft + 'px';
     if(marginLeft > 1024 )  {
-        marginLeft = 0;
+        marginRight = 1024;
     }
 }
 img.onclick = function (){
