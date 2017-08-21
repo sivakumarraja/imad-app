@@ -71,7 +71,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/siva-index', function (req, res) {
+app.get('/index1', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index-siva.html'));
 });
 
