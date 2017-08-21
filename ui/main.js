@@ -8,7 +8,7 @@ element.innerHTML = "New Text added in client-side Java Script";
 //Move the image
 var img = document.getElementById('madi');
 var marginLeft = 0;
-function moveRight() {
+function moveRight () {
     marginLeft = marginLeft + 1;
     img.style.marginLeft = marginLeft + 'px';
 }
