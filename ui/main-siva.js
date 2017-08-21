@@ -1,19 +1,19 @@
-console.log('Loaded!');
+console.log('Loaded 1 !');
 
 // change the text of the main-text div
-var element = document.getElementById('main-text1'
+var element1 = document.getElementById('main-text1'
 );
-element. innerHTML = "New Value1";
+element1. innerHTML = "New Value1";
 
 // Move the image
 
-var img = document.getElementById('madi1');
-var marginLeft = 0;
+var img1 = document.getElementById('madi1');
+var marginLeft1 = 0;
 function moveRight() {
-    marginLeft = marginLeft + 10;
-    img.style.marginLeft = marginLeft + 'px';
-    if(marginLeft > screen.width )  {
-        marginLeft = 0;
+    marginLeft1 = marginLeft1 + 10;
+    img.style.marginLeft1 = marginLeft1 + 'px';
+    if(marginLeft1 > screen.width )  {
+        marginLeft1 = 0;
     }
 }
 img.onclick = function (){
