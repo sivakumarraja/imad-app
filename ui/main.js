@@ -11,6 +11,8 @@ var img = document.getElementById('madi');
 var marginLeft = 0;
 function moveRight() {
     marginLeft = marginLeft + 1;
+    screen.height + "</p>";
+txt += "<p>Available width/height: " + screen.availWidth + "*" + screen.availHeight + "</p>";
     img.style.marginLeft = marginLeft + 'px';
 }
 img.onclick = function (){
