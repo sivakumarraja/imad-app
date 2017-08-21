@@ -1,8 +1,7 @@
 console.log('Loaded 1 !');
 
 // change the text of the main-text div
-var element = document.getElementById('main-text1'
-);
+var element = document.getElementById('main-text1');
 element. innerHTML = "New Value1";
 
 // Move the image
