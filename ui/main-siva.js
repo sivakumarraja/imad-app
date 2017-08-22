@@ -10,6 +10,8 @@ var img = document.getElementById('madi1');
 var marginLeft = 0;
 
 alert(window.left);
+alert(window.screenLeft);
+
 function moveRight() {
     marginLeft = marginLeft + 10;
     img.style.marginLeft = marginLeft + 'px';
