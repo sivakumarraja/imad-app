@@ -9,16 +9,12 @@ element. innerHTML = "New Value1";
 var img = document.getElementById('madi1');
 var marginLeft = 0;
 
-alert(window.left);
-alert(window.screenLeft);
-
 function moveRight() {
     marginLeft = marginLeft + 10;
     img.style.marginLeft = marginLeft + 'px';
     if(marginLeft > screen.width )  {
         //marginLeft = 0;
-        //marginLeft = -(screen.width/2);
-        marginLeft = window.left;
+        marginLeft = -(screen.width/2);
     }
 }
 
