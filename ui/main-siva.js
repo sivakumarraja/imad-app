@@ -9,14 +9,13 @@ element. innerHTML = "New Value1";
 var img = document.getElementById('madi1');
 var marginLeft = 0;
 
-alert(screen.width);
-
 function moveRight() {
     marginLeft = marginLeft + 10;
     img.style.marginLeft = marginLeft + 'px';
     if(marginLeft > screen.width )  {
         //marginLeft = 0;
-        marginLeft = -(screen.width/2);
+        //marginLeft = -(screen.width/2);
+        marginLeft = window.left;
     }
 }
 
