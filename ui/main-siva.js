@@ -11,12 +11,13 @@ var marginLeft = 0;
 
 function moveRight() {
     marginLeft = marginLeft + 10;
-    img.style.marginLeft = marginLeft + 'px';
+    
     if(marginLeft > screen.width )  {
         //marginLeft = -(screen.width/2);
         marginLeft = -marginLeft;
         //marginLeft = 0;
     }
+    img.style.marginLeft = marginLeft + 'px';
 }
 
 img.onclick = function ()
