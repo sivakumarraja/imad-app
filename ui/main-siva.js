@@ -12,7 +12,7 @@ var marginLeft = 0;
 function moveRight() {
     marginLeft = marginLeft + 10;
     
-    if(marginLeft > screen.width )  {
+    if((marginLeft + img.style.width) > screen.width )  {
         //marginLeft = -(screen.width/2);
         marginLeft = -marginLeft;
         //marginLeft = 0;
