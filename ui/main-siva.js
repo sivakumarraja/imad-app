@@ -12,11 +12,11 @@ var marginLeft = 0;
 alert(screen.width);
 
 function moveRight() {
-    marginLeft = marginLeft + 100;
+    marginLeft = marginLeft + 10;
     img.style.marginLeft = marginLeft + 'px';
     if(marginLeft > screen.width )  {
         //marginLeft = 0;
-        marginLeft = marginLeft - screen.width;
+        marginLeft = -(screen.width/2);
     }
 }
 
