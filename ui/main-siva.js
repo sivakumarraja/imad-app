@@ -14,7 +14,7 @@ function moveRight() {
     img.style.marginLeft = marginLeft + 'px';
     if(marginLeft > screen.width )  {
         //marginLeft = -(screen.width/2);
-        marginLeft = '-' + marginLeft;
+        marginLeft = -marginLeft;
         //marginLeft = 0;
     }
 }
