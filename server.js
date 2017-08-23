@@ -69,7 +69,7 @@ function createTemplate(data){
                         Author:
                         <br/>
                         <input type="text" id="name" placeholder=""/>
-                        <input type="comment-submit" value="submit" id="submit_btn"/>
+                        <input type="submit" value="submit" id="submit_btn"/>
                         <ul id="namelist">
                         </ul>
                         <div id="comments">
