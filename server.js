@@ -17,14 +17,7 @@ var articles={
                 <p>
                     He is most adorable kid
                 </p>`
-                  <div class="footer">
-                This button <button id="counter">Click me!</button> has been clicked <span id="count">0</span> times.
-                <hr/>
-                <input type="text" id="name" placeholder="name"/>
-                <input type="submit" value="submit" id="submit_btn"/>
-                <ul id="namelist">
-                </ul>
-            </div>
+               
         },
     'article-two':{
         title:'Article 2',
@@ -54,19 +47,30 @@ function createTemplate(data){
             </head>
             <body>
                 <div class='container'>
-                <div>
-                    <a href='/'>HOME</a>
-                </div>
-                <hr/>
-                <h3>
-                    ${heading}
-                </h3>
-                <div>
-                    ${date}
-                </div>
-                <div>
-                    ${content}
-                </div>
+                    <div>
+                        <a href='/'>HOME</a>
+                    </div>
+                    <hr/>
+                    <h3>
+                        ${heading}
+                    </h3>
+                    <div>
+                        ${date}
+                    </div>
+                    <div>
+                        ${content}
+                    </div>
+                    
+                     <div class="footer">
+                        This button <button id="counter">Click me!</button> has been clicked <span id="count">0</span> times.
+                        <hr/>
+                        <input type="text" id="name" placeholder="name"/>
+                        <input type="submit" value="submit" id="submit_btn"/>
+                        <ul id="namelist">
+                        </ul>
+                        <div id="comments">
+                        </div>
+                    </div>
                 </div>
             </body>
         </html>
