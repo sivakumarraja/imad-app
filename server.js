@@ -68,10 +68,9 @@ function createTemplate(data){
                         <br/>
                         Author:
                         <br/>
-                        <input type="text" id="name" placeholder=""/>
-                        <input type="submit" value="submit" id="submit_btn"/>
-                        <ul id="namelist">
-                        </ul>
+                        <input type="text" id="author" placeholder=""/>
+                        <input type="submit" value="submit" id="comment-submit"/>
+                        
                         <div id="comments">
                         </div>
                     </div>
@@ -83,40 +82,9 @@ function createTemplate(data){
 }
 
 
-//submit name
-var submit = document.getElementById('submit_btn');
-submit.onclick = function () {
-    
-    // Creat a request object
-    var request = new XMLHttpRequest();
-    
-    
-    // Capture the response and store it in a variable
-    request.onreadystatechange = function() {
-        if (request.readyState === XMLHttpRequest.DONE) {
-            // Take some action
-            if(request.status === 200) {
-                // capture a list of names and render it as a list
-                 var names = request.responseText;
-                names =JSON.parse(names);
-                var list = '';
-                for (var i=0; i< names.length; i++) {
-                    list += '<li>' + names[i] + '</li>';
-                }
-                var ul = document.getElementById('namelist');
-                ul.innerHTML = list;
-            }
-        }
-        // Not done yet
-    };
-    
-    // Make the request
-    var nameInput = document.getElementById('name');
-    var name = nameInput.value;
-    request.open('GET','http://sivakumarraja.imad.hasura-app.io/submit-name?name=' + name, true);
-    request.send(null);
-    
-};
+
+
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -147,6 +115,42 @@ app.get('/:articleName',function(req, res) {
     var articleName = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
 });
+
+
+//submit name
+var submit = document.getElementById('submit_btn');
+submit.onclick = function () {
+    
+    // Creat a request object
+    var request = new XMLHttpRequest();
+    
+    
+    // Capture the response and store it in a variable
+    request.onreadystatechange = function() {
+        if (request.readyState === XMLHttpRequest.DONE) {
+            // Take some action
+            if(request.status === 200) {
+                // capture a list of names and render it as a list
+                 var comments = request.responseText;
+                comments =JSON.parse(comments);
+                var list = '';
+                for (var i= comments.length-1; i>=0; i--) {
+                    list += '<span>' + comments[i] + '</span>';
+                }
+                var ul = document.getElementById('comments');
+                ul.innerHTML = list;
+            }
+        }
+        // Not done yet
+    };
+    
+    // Make the request
+    var commentInput = document.getElementById('comment');
+    var comment = commentInput.value;
+    request.open('GET','http://sivakumarraja.imad.hasura-app.io/:articleName', true);
+    request.send(null);
+    
+};
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
