@@ -20,6 +20,7 @@ submit.onclick = function () {
                 }
                 var commentslist = document.getElementById('comments');
                 commentslist.innerHTML = list;
+                commentInput.clear;
             }
         }
         // Not done yet
@@ -28,7 +29,6 @@ submit.onclick = function () {
     // Make the request
     var commentInput = document.getElementById('comment');
     var comment = commentInput.value;
-    commentInput.clear;
     request.open('GET','http://sivakumarraja.imad.hasura-app.io/comment-submit?comment=' + comment, true);
     request.send(null);
     
