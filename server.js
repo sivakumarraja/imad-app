@@ -115,6 +115,9 @@ app.get('/submit-name', function(req, res) { // URL: /submit-name?name=xxxxx
 
 app.get('/:articleName',function(req, res) {
     var articleName = req.params.articleName;
+    var comment = req.query.comment;
+    comments.push(comment);
+    res.send(JSON.stringify(comments)); 
     res.send(createTemplate(articles[articleName]));
 });
 
