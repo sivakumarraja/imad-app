@@ -17,7 +17,14 @@ var articles={
                 <p>
                     He is most adorable kid
                 </p>`
-                 
+                  <div class="footer">
+                This button <button id="counter">Click me!</button> has been clicked <span id="count">0</span> times.
+                <hr/>
+                <input type="text" id="name" placeholder="name"/>
+                <input type="submit" value="submit" id="submit_btn"/>
+                <ul id="namelist">
+                </ul>
+            </div>
         },
     'article-two':{
         title:'Article 2',
