@@ -112,7 +112,7 @@ app.get('/submit-name', function(req, res) { // URL: /submit-name?name=xxxxx
     res.send(JSON.stringify(names)); 
 });
 
-
+var comments = [];
 app.get('/:articleName',function(req, res) {
     var articleName = req.params.articleName;
     var comment = req.query.comment;
