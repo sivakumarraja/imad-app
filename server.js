@@ -74,7 +74,7 @@ function createTemplate(data){
                         <div id="comments">
                         </div>
                     </div>
-                    <script type="text/javascript" src="/ui/main.js"></script>
+                    <script type="text/javascript" src="/ui/main-siva.js"></script>
                 </div>
             </body>
         </html>
