@@ -79,12 +79,12 @@ app.get('/', function (req, res) {
 });
 
 var counter = 0;
-app.get('/counter11', function(req, res) {
+app.get('/counter', function(req, res) {
     counter = counter + 1;
     res.send(counter.toString());
 });
 
-app.get('/index2', function (req, res) {
+app.get('/index', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index-siva.html'));
 });
 
