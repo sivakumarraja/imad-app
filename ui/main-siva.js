@@ -13,7 +13,7 @@ submit.onclick = function () {
             if(request.status === 200) {
                 // capture a list of names and render it as a list
                  var comments = request.responseText;
-                 
+                 alert(comments);
                 comments =JSON.parse(comments);
                 alert(comments);
                 var list = '';
