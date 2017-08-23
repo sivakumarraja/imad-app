@@ -22,9 +22,9 @@ var articles={
                         <br/>
                         <textarea id="comment" rows="4" cols="50"></textarea>
                         <br/>
-                        Author:
+                        <!--Author:
                         <br/>
-                        <!--<input type="text" id="author" placeholder=""/>-->
+                        <input type="text" id="author" placeholder=""/>-->
                         <input type="submit" value="submit" id="comment-submit"/>
                         
                         <div id="comments">
