@@ -84,7 +84,7 @@ app.get('/counter11', function(req, res) {
     res.send(counter.toString());
 });
 
-app.get('/index1', function (req, res) {
+app.get('/index2', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index-siva.html'));
 });
 
