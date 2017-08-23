@@ -24,7 +24,7 @@ var articles={
                         <br/>
                         Author:
                         <br/>
-                        <input type="text" id="author" placeholder=""/>
+                        <!--<input type="text" id="author" placeholder=""/>-->
                         <input type="submit" value="submit" id="comment-submit"/>
                         
                         <div id="comments">
