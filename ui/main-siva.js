@@ -5,9 +5,6 @@ submit.onclick = function () {
     // Creat a request object
     var request = new XMLHttpRequest();
     
-    var commentta = document.getElementById('comment');
-    commentta.value='';
-    
     // Capture the response and store it in a variable
     request.onreadystatechange = function() {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -30,6 +27,7 @@ submit.onclick = function () {
     // Make the request
     var commentInput = document.getElementById('comment');
     var comment = commentInput.value;
+    commentInput.value='';
     request.open('GET','http://sivakumarraja.imad.hasura-app.io/comment-submit?comment=' + comment, true);
     request.send(null);
     
