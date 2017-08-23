@@ -1,17 +1,47 @@
 <!doctype html>
-<html>
-    <head>
-        <link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div class="center">
-            <img id="madi1" src="/ui/madi.png" class="img-medium"/>
-        </div>
-        <br>
-        <div id="main-text1" class="center text-big bold">
-            Hi! I am Siva, and this is my first webapp.
-        </div>
-        <script type="text/javascript" src="/ui/main-siva.js">
-        </script>
-    </body>
-</html>
+ <html>
+            <head>
+                <title>
+                  My Article....
+                </title>
+                <link href="/ui/style.css" rel="stylesheet" />
+            </head>
+            <body>
+                <div class='container'>
+                    <div>
+                        <a href='/'>HOME</a>
+                    </div>
+                    <hr/>
+                    <h3>
+                        ${heading}
+                    </h3>
+                    <div>
+                        ${date}
+                    </div>
+                    <div>
+                        <p>
+                            The most lovely charm in our family.
+                        </p>
+                        <p>
+                            He is most adorable kid
+                        </p>
+                    </div>
+                    
+                     <div class="footer">
+                        Comments:
+                        <br/>
+                        <textarea id="comment" rows="4" cols="50"></textarea>
+                        <br/>
+                        <!--Author:
+                        <br/>
+                        <input type="text" id="author" placeholder=""/>-->
+                        <input type="submit" value="submit" id="comment-submit"/>
+                        
+                        <div id="comments">
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="/ui/main-siva.js"></script>
+                     
+                </div>
+            </body>
+        </html>
