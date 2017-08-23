@@ -1,5 +1,3 @@
-var commentInput = document.getElementById('comment');
-
 //submit name
 var submit = document.getElementById('comment-submit');
 submit.onclick = function () {
@@ -7,6 +5,8 @@ submit.onclick = function () {
     // Creat a request object
     var request = new XMLHttpRequest();
     
+    var commentta = document.getElementById('comment');
+    commentta.clear;
     
     // Capture the response and store it in a variable
     request.onreadystatechange = function() {
@@ -22,14 +22,13 @@ submit.onclick = function () {
                 }
                 var commentslist = document.getElementById('comments');
                 commentslist.innerHTML = list;
-                commentInput.clear;
             }
         }
         // Not done yet
     };
     
     // Make the request
-    
+    var commentInput = document.getElementById('comment');
     var comment = commentInput.value;
     request.open('GET','http://sivakumarraja.imad.hasura-app.io/comment-submit?comment=' + comment, true);
     request.send(null);
