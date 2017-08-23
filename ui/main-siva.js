@@ -1,27 +1,36 @@
-console.log('Loaded 1 !');
-
-// change the text of the main-text div
-var element = document.getElementById('main-text1');
-element. innerHTML = "New Value1";
-
-// Move the image
-
-var img = document.getElementById('madi1');
-var marginLeft = 0;
-
-function moveRight() {
-    marginLeft = marginLeft + 10;
+//submit name
+var submit = document.getElementById('comment-submit');
+alert('oo');
+submit.onclick = function () {
     
-    if((marginLeft + img.style.width) > screen.width )  {
-        //marginLeft = -(screen.width/2);
-        marginLeft = -marginLeft;
-        //marginLeft = 0;
-    }
-    img.style.marginLeft = marginLeft + 'px';
-}
-
-img.onclick = function ()
-{
-    // alert('hello..');
-    var interval = setInterval(moveRight,50);
+    alert('llll');
+    // Creat a request object
+    var request = new XMLHttpRequest();
+    
+    
+    // Capture the response and store it in a variable
+    request.onreadystatechange = function() {
+        if (request.readyState === XMLHttpRequest.DONE) {
+            // Take some action
+            if(request.status === 200) {
+                // capture a list of names and render it as a list
+                 var comments = request.responseText;
+                comments =JSON.parse(comments);
+                var list = '';
+                for (var i= comments.length-1; i>=0; i--) {
+                    list += '<span>' + comments[i] + '</span>';
+                }
+                var ul = document.getElementById('comments');
+                ul.innerHTML = list;
+            }
+        }
+        // Not done yet
+    };
+    
+    // Make the request
+    var commentInput = document.getElementById('comment');
+    var comment = commentInput.value;
+    request.open('GET','http://sivakumarraja.imad.hasura-app.io/article-one', true);
+    request.send(null);
+    
 };
