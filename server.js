@@ -66,6 +66,7 @@ function createTemplate(data){
                         <br/>
                         <textarea id="comment" rows="4" cols="50"></textarea>
                         <br/>
+                        Author: <input type="text" id="author"></input> <br/>
                         <input type="submit" value="submit" id="comment-submit"/>
                         
                         <ul id="comments">
@@ -90,6 +91,8 @@ app.get('/', function (req, res) {
 var comments =[];
 app.get('/siva', function(req, res) {
     var comment = req.query.comment;
+    var author = req.query.author;
+    comments.push(author);
     comments.push(comment);
     res.send(JSON.stringify(comments));
 });
