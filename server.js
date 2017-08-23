@@ -117,7 +117,7 @@ app.get('/:articleName',function(req, res) {
     var articleName = req.params.articleName;
     var comment = req.query.comment;
     comments.push(comment);
-    res.send(JSON.stringify(comments)); 
+    alert(JSON.stringify(comments)); 
     res.send(createTemplate(articles[articleName]));
 });
 
