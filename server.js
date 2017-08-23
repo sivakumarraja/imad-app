@@ -118,7 +118,7 @@ app.get('/:articleName',function(req, res) {
 
 
 //submit name
-var submit = document.getElementById('submit_btn');
+var submit = document.getElementById('comment-submit');
 submit.onclick = function () {
     
     // Creat a request object
