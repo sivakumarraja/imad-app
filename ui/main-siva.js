@@ -28,7 +28,6 @@ submit.onclick = function () {
     // Make the request
     var commentInput = document.getElementById('comment');
     var comment = commentInput.value;
-    alert(comment);
     request.open('GET','http://sivakumarraja.imad.hasura-app.io/comment-submit?comment=' + comment, true);
     request.send(null);
     
