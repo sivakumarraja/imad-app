@@ -61,6 +61,17 @@ function createTemplate(data){
                         ${content}
                     </div>
                     
+                    <div class="footer">
+                        Comments:
+                        <br/>
+                        <textarea id="comment" rows="4" cols="50"></textarea>
+                        <br/>
+                        <input type="submit" value="submit" id="comment-submit"/>
+                        
+                        <ul id="comments">
+                        </ul>
+                    </div>
+                    <script type="text/javascript" src="/ui/siva-main.js"></script>
                      
                 </div>
             </body>
@@ -84,10 +95,7 @@ app.get('/comment-submit', function(req, res) {
     var comment = req.query.comment;
     comments.push(comment);
     res.send(JSON.stringify(comments));
-    
 });
-
-
 
 var counter = 0;
 app.get('/counter', function(req, res) {
@@ -98,7 +106,6 @@ app.get('/counter', function(req, res) {
 app.get('/index', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index-siva.html'));
 });
-
 
 var names = [];
 app.get('/submit-name', function(req, res) { // URL: /submit-name?name=xxxxx
@@ -115,8 +122,6 @@ app.get('/:articleName',function(req, res) {
     res.send(createTemplate(articles[articleName]));
 });
 
-
-
 app.get('/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
@@ -132,8 +137,6 @@ app.get('/ui/siva-main.js', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-
-
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
