@@ -1,9 +1,7 @@
 //submit name
 var submit = document.getElementById('comment-submit');
-alert('oo');
 submit.onclick = function () {
     
-    alert('llll');
     // Creat a request object
     var request = new XMLHttpRequest();
     
@@ -15,6 +13,7 @@ submit.onclick = function () {
             if(request.status === 200) {
                 // capture a list of names and render it as a list
                  var comments = request.responseText;
+                 alert(comments);
                 comments =JSON.parse(comments);
                 var list = '';
                 for (var i= comments.length-1; i>=0; i--) {
