@@ -28,7 +28,7 @@ submit.onclick = function () {
     var commentInput = document.getElementById('comment');
     var comment = commentInput.value;
     commentInput.value='';
-    request.open('GET','http://sivakumarraja.imad.hasura-app.io/comment-submit?comment=' + comment, true);
+    request.open('GET','http://sivakumarraja.imad.hasura-app.io/siva?comment=' + comment, true);
     request.send(null);
     
 };
