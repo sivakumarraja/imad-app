@@ -20,8 +20,8 @@ submit.onclick = function () {
                 for (var i= comments.length-1; i>=0; i--) {
                     list += '<span>' + comments[i] + '</span>';
                 }
-                var ul = document.getElementById('comments');
-                ul.innerHTML = list;
+                var commentslist = document.getElementById('comments');
+                commentslist.innerHTML = list;
             }
         }
         // Not done yet
