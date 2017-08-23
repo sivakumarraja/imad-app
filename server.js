@@ -80,7 +80,7 @@ app.get('/', function (req, res) {
 
 
 var comments =[];
-app.get('/article-one', function(req, res) {
+app.get('/index1', function(req, res) {
     var comment = req.query.comment;
     comments.push(comment);
     res.send(JSON.stringify(comments));
