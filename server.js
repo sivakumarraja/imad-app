@@ -62,6 +62,9 @@ function createTemplate(data){
                     </div>
                     
                      <div class="footer">
+                        Comments:
+                        <br/>
+                        <textarea id="comment" rows="4" cols="50"></textarea>
                         
                         <input type="text" id="name" placeholder="name"/>
                         <input type="submit" value="submit" id="submit_btn"/>
