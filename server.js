@@ -78,6 +78,17 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+
+var comments =[];
+app.get('/comment-submit', function(req, res) {
+    var comment = req.query.comment;
+    comments.push(comment);
+    res.send(JSON.stringify(comments));
+    
+});
+
+
+
 var counter = 0;
 app.get('/counter', function(req, res) {
     counter = counter + 1;
@@ -87,6 +98,7 @@ app.get('/counter', function(req, res) {
 app.get('/index', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index-siva.html'));
 });
+
 
 var names = [];
 app.get('/submit-name', function(req, res) { // URL: /submit-name?name=xxxxx
