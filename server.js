@@ -66,7 +66,8 @@ function createTemplate(data){
                         <br/>
                         <textarea id="comment" rows="4" cols="50"></textarea>
                         <br/>
-                        <input type="text" id="name" placeholder="name"/>
+                        Author:
+                        <input type="text" id="name" placeholder=""/>
                         <input type="submit" value="submit" id="submit_btn"/>
                         <ul id="namelist">
                         </ul>
