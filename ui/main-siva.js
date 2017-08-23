@@ -6,7 +6,7 @@ submit.onclick = function () {
     var request = new XMLHttpRequest();
     
     var commentta = document.getElementById('comment');
-    commentta.clear;
+    commentta.value='';
     
     // Capture the response and store it in a variable
     request.onreadystatechange = function() {
