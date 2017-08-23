@@ -30,7 +30,8 @@ submit.onclick = function () {
     // Make the request
     var commentInput = document.getElementById('comment');
     var comment = commentInput.value;
-    request.open('GET','http://sivakumarraja.imad.hasura-app.io/article-one', true);
+    alert(comment);
+    request.open('GET','http://sivakumarraja.imad.hasura-app.io/article-one?comment=' + comment, true);
     request.send(null);
     
 };
