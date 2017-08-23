@@ -63,8 +63,10 @@ submit.onclick = function () {
 
 //submit name
 var submit = document.getElementById('comment-submit');
+alert('oo');
 submit.onclick = function () {
     
+    alert('llll');
     // Creat a request object
     var request = new XMLHttpRequest();
     
