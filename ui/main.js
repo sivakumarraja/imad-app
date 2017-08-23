@@ -91,7 +91,7 @@ submit.onclick = function () {
     // Make the request
     var commentInput = document.getElementById('comment');
     var comment = commentInput.value;
-    request.open('GET','http://sivakumarraja.imad.hasura-app.io/:articleName', true);
+    request.open('GET','http://sivakumarraja.imad.hasura-app.io/article-one', true);
     request.send(null);
     
 };
