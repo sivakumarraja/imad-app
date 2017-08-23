@@ -17,21 +17,7 @@ var articles={
                 <p>
                     He is most adorable kid
                 </p>
-                <div class="footer">
-                        Comments:
-                        <br/>
-                        <textarea id="comment" rows="4" cols="50"></textarea>
-                        <br/>
-                        <!--Author:
-                        <br/>
-                        <input type="text" id="author" placeholder=""/>-->
-                        <input type="submit" value="submit" id="comment-submit"/>
-                        
-                        <div id="comments">
-                        </div>
-                    </div>
-                    <script type="text/javascript" src="/ui/main-siva.js"></script>`
-               
+               `
         },
     'article-two':{
         title:'Article 2',
@@ -112,12 +98,8 @@ app.get('/submit-name', function(req, res) { // URL: /submit-name?name=xxxxx
     res.send(JSON.stringify(names)); 
 });
 
-var comments = [];
 app.get('/:articleName',function(req, res) {
     var articleName = req.params.articleName;
-    var comment = req.query.comment;
-    comments.push(comment);
-    comments = JSON.stringify(comments); 
     res.send(createTemplate(articles[articleName]));
 });
 
