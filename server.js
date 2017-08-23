@@ -16,7 +16,21 @@ var articles={
                 </p>
                 <p>
                     He is most adorable kid
-                </p>`
+                </p>
+                <div class="footer">
+                        Comments:
+                        <br/>
+                        <textarea id="comment" rows="4" cols="50"></textarea>
+                        <br/>
+                        Author:
+                        <br/>
+                        <input type="text" id="author" placeholder=""/>
+                        <input type="submit" value="submit" id="comment-submit"/>
+                        
+                        <div id="comments">
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="/ui/main-siva.js"></script>`
                
         },
     'article-two':{
@@ -61,20 +75,7 @@ function createTemplate(data){
                         ${content}
                     </div>
                     
-                     <div class="footer">
-                        Comments:
-                        <br/>
-                        <textarea id="comment" rows="4" cols="50"></textarea>
-                        <br/>
-                        Author:
-                        <br/>
-                        <input type="text" id="author" placeholder=""/>
-                        <input type="submit" value="submit" id="comment-submit"/>
-                        
-                        <div id="comments">
-                        </div>
-                    </div>
-                    <script type="text/javascript" src="/ui/main-siva.js"></script>
+                     
                 </div>
             </body>
         </html>
