@@ -11,10 +11,8 @@ submit.onclick = function () {
             // Take some action
             if(request.status === 200) {
                 // capture a list of names and render it as a list
-                 var comments = request.responseText;
-                 alert(comments);
+                var comments = request.responseText;
                 comments =JSON.parse(comments);
-                alert(comments);
                 var list = '';
                 for (var i = 0; i <= comments.length-1; i=i+2) {
                     list += '<span><b>' + comments[i] + '</b> says: ' + comments[i+1] + '</span><br/>';
