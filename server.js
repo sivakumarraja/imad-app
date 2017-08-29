@@ -4,6 +4,7 @@ var path = require('path');
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var config = {
     user: 'sivakumarraja',
@@ -16,6 +17,11 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(session({
+    secret: 'someRandomSecretValue',
+    cookie: { maxAge: 1000 * 60 * 60 * 24 * 30 }
+}));
+
 
 /*var articles={ 
     'article-one':{
@@ -149,18 +155,33 @@ app.post('/login', function(req, res) {
                 res.send(403).send('username/password is invalid');
             } else {
                 // Match the password
-                var dbString = result.rows[0].password;
+                /*var dbString = result.rows[0].password;
                 var salt = dbString.split('$')[2]; //salt value;
-                var hashedPassword = hash(password, salt); //creating a hash based password submitted and the original salt
+                var hashedPassword = hash(password, salt); //creating a hash based password submitted and the original salt*/
                 if(hashedPassword === dbString)
                 {
+                    // set the session
+                    req.session.auth = {userId: result.rows[0].id};
+                    // set a cookie with a session id
+                    // internally, on the server side, it maps the session id to an object
+                    // { auth: {authid}}
+                    
                     res.send("Credentials correct"); 
+                    
                 } else {
                     res.send(403).send('username/password is invalid');
                 }
             }
         }
     });
+})
+
+app.get('/check-login', function(req, res) {
+    if(req.session && req.session.auth && req.session.auth.userId){
+        res.send('You are logged in: '+ req.session.auth.userId.toString());
+    } else {
+        res.send('You are not logged in');
+    }
 })
 
 var pool = new Pool(config);
