@@ -100,7 +100,13 @@ app.get('/', function (req, res) {
 function hash (input, salt) {
     // How to create a hash?
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
-    return hashed.toString('hex');
+    //return hashed.toString('hex');
+    return ["pbkdf2", "10000", salt, hashed.toString('hex')].join('$');
+    
+    //algorithm: md5
+    //"password" -> jdy76832v2dkljfy33unrbhjguur                gives fixed hash value.
+    //"password-this-is-some-random-string' -> always gives different value when added a salt value. creates as 
+    //              <hash> <hash>...10000 times
 }
 
 app.get('/hash/:input', function(req, res) {
