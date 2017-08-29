@@ -141,13 +141,12 @@ app.post('/login', function(req, res) {
     var username = req.body.username;
     var password = req.body.password;
     
-    
     pool.query('SELECT * from "user" where username = $1,', [username], function (err, result) {
         if(err) {
             res.status(500).send(err.toString());
         } else {
             if(result.rows.length === 0) {
-                res.status(403).send('username/password is invalid');
+                res.send(403).send('username/password is invalid');
             }
             else
             {
@@ -157,11 +156,10 @@ app.post('/login', function(req, res) {
                 var hashedPassword = hash(password, salt); //creating a hash based password submitted and the original salt
                 if(hashedPassword === dbString)
                 {
-                    res.status("Credentials correct"); 
+                    res.send("Credentials correct"); 
                 } else {
-                    res.status(403).send('username/password is invalid');
+                    res.send(403).send('username/password is invalid');
                 }
-                res.send('User successfully created: ' + username);
             }
         }
     });
